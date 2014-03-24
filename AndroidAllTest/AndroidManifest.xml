@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zmm.allproject"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="9"
+        android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+
+    <application
+        android:name="com.zmm.allproject.mainUI.AllApplication"
+        android:process="com.zmm.allproject"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_icon"
+        android:label="@string/app_name"
+        >
+        <activity
+            android:name="com.zmm.allproject.mainUI.MainActivity"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="com.zmm.allproject.four_big_component.activity_lifecycle.MyPreferenceActivity"></activity>
+        <activity android:name="com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForLifecycle" android:label="ActivityForLifecycle"></activity>
+        <activity android:name="com.zmm.allproject.four_big_component.activity_lifecycle.LifecycleActivity2" android:label="LifecycleActivity2"></activity>
+        <activity 
+            android:name="com.zmm.allproject.four_big_component.activity_lifecycle.LifecycleActivity3" 
+            android:theme="@android:style/Theme.Dialog"
+            android:label="ThemeDialogActivity"
+            >
+        </activity>
+        <activity 
+            android:label="ActivityContainsFragment"
+            android:name="com.zmm.allproject.four_big_component.activity_lifecycle.ActivityContainsFragment"
+            >
+        </activity>
+        <activity 
+            android:name="com.zmm.allproject.four_big_component.activity_lifecycle.ForUI"
+            android:label="ForUI"
+            >
+        </activity>
+        
+        <service 
+            android:name="com.zmm.allproject.four_big_component.service.AllServicevice"
+            >
+            <intent-filter >
+                <action android:name="com.zmm.allproject.AllService"/>
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
