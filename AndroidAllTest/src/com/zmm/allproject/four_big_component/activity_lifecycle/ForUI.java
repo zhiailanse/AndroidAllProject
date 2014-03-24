@@ -13,5 +13,6 @@ public class ForUI extends ActivityForConsole {
 		setDebug(false);
 		
 		setContentView(R.layout.forui_layout);
+		System.out.println("kkk");
 	}
 }
