@@ -1,7 +1,7 @@
 package com.zmm.allproject.four_big_component;
 
 import com.zmm.allproject.R;
-import com.zmm.allproject.four_big_component.activity_lifecycle.ActivityContainsFragment;
+import com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForFragmentLifecycle;
 import com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForLifecycle;
 import com.zmm.allproject.four_big_component.activity_lifecycle.ForUI;
 import com.zmm.allproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
@@ -53,7 +53,7 @@ public class Fragment4Activity extends ListFragmentForConsole {
 					startActivity(intent2);
 					break;
 				case 2:
-					Intent intent3 = new Intent(getActivity(),ActivityContainsFragment.class);
+					Intent intent3 = new Intent(getActivity(),ActivityForFragmentLifecycle.class);
 					startActivity(intent3);
 					break;
 				case 3:

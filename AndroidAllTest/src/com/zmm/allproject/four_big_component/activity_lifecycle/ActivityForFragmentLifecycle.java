@@ -8,7 +8,20 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 
-public class ActivityContainsFragment extends FragmentActivity {
+public class ActivityForFragmentLifecycle extends FragmentActivity {
+	/*
+	 * lifecycle
+	 * Acvitity oncreate()
+	 * f onCreate()
+	 * f onActiityAttached()
+	 * f onViewCreated()
+	 * f onStart()
+	 * Acvitity onStart()
+	 * f onStart()
+	 * Acvitity onResume()
+	 * f onResume()
+	 * 
+	 */
 	
 	TextFragment textFragment = new TextFragment();
 	ListFragmentForLifecycle listFragmentForLifecycle = new ListFragmentForLifecycle();

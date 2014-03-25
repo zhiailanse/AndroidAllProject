@@ -38,7 +38,7 @@
         </activity>
         <activity 
             android:label="ActivityContainsFragment"
-            android:name="com.zmm.allproject.four_big_component.activity_lifecycle.ActivityContainsFragment"
+            android:name="com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForFragmentLifecycle"
             >
         </activity>
         <activity 
