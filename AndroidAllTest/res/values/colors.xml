@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="app_blue">#19a0e4</color>
+    <!-- tab bar -->
+    <!-- #fff2f4f5 -->
+    <color name="color_transparent">#00000000</color>
+    <color name="listview_selector_background">@color/color_transparent</color>
+    <color name="color_tab_text">#ffffffff</color>
+    <color name="color_tab_text_2">#4c000000</color>
+    <color name="color_tab_bg">#ff279ce7</color>
+    <color name="color_tab_press">#ff47caff</color>
+    <color name="color_new_edit_tab">#2f2f3b</color>
+    <color name="color_new_divider_nor">#ffeeeeee</color>
+    <color name="color_minibar_pressed">#e1e4e6</color>
+    <color name="color_bg_widget">#4c8f9ca3</color>
+    <color name="color_listview_divider">#ffe1e4e6</color>
+    <color name="color_bg_null_page">#ffffffff</color>
+    <!-- minibar -->
+    <color name="color_minibar_btn_press">#ff279ce7</color>
+    <!-- title bar -->
+    <color name="color_titlebar_text">#ffffffff</color>
+    <color name="color_titlebar_text_black">#ff32393d</color>
+    <!-- common color -->
+    <color name="color_window_bg">#ffffffff</color>
+    <color name="color_tab_press_bg">#ffcccccc</color>
+    <color name="color_gridview_item_pressed">#ff279ce7</color>
+    <color name="color_gridview_item_text1">#ff333333</color>
+    <color name="color_background_color">#ffffffff</color>
+    <!-- list edit -->
+    <!-- dialog colors -->
+    <color name="color_dialog_title">#ff2f2f3A</color>
+    <color name="color_dialog_list_press">#ff47caff</color>
+    <color name="color_dialog_list_line">#EEEEEEE6</color>
+    <!-- 蓝色分割线旁边的蓝色文字色值 -->
+    <color name="color_text_line_blue">#19a0e4</color>
+    <!-- 蓝色分割线色值 -->
+    <color name="color_dividing_line_blue">#7f19a0e4</color>
+    <color name="color_dividing_line_grey">#e1e4e6</color>
+    <color name="music_background">#f2f4f5</color>
+    <color name="white">#ffffffff</color>
+    <color name="black">#ff000000</color>
+    <color name="grey">#d6d6d6</color>
+    <color name="pink">#e07e7d</color>
+    <color name="translucent_dark">#4B000000</color>
+    <color name="color_text_grey">#ff999999</color>
+    <!-- zhl add end :baidu music 2.0 -->
+    <!-- for night mode -->
+    <!-- color name="text_big">#ffcccccc</color -->
+    <color name="section_header_bg">#ffffffff</color>
+    <!--
+         color name="night_mode_textcolor_grid_item">#ffcccccc</color>
+	     <color name="night_mode_textcolor_grid_item_2">#ff787878</color>
+    -->
+    <!-- text color -->
+    <!-- vote shadow collor -->
+    <!-- regist & login start -->
+    <color name="title_text_color">#ffffff</color>
+    <color name="btn_text_color">#ffffff</color>
+    <color name="tab_pressed_color">#3289cb</color>
+    <color name="tab_normal_color">#333333</color>
+    <color name="error_text_color">#e00000</color>
+    <color name="tip_text_color">#333333</color>
+    <color name="edit_text_color">#333333</color>
+    <color name="edit_hint_color">#dddddd</color>
+    <color name="edit_neting_color">#888888</color>
+    <color name="show_text_color">#333333</color>
+    <!-- regist & login end -->
+    <color name="title_background">#2f2f3a</color>
+    <color name="select_type_window_background">#2f2f3a</color>
+    <color name="select_type_window_background_selected">#279ce7</color>
+    <color name="select_type_window_seperator">#373741</color>
+    <color name="dialog_dark">#b1b1b1</color>
+    <color name="translucent_white">#33FFFFFF</color>
+    <!-- 加载更多背景 -->
+    <color name="footer_grey">#FFEEEEEE</color>
+    <color name="divider_line">#FFEEEEEE</color>
+    <!-- 均衡器字体颜色 -->
+    <color name="equalizer_text_color">#FFcccccc</color>
+    <color name="bg_song_recognition_entrance">#EEEEEE</color>
+    <color name="bg_online">#f2f4f5</color>
+    <!-- 榜单, 第几首歌背景色 -->
+    <color name="seq_no_color_1">#e76767</color>
+    <color name="seq_no_color_2_3">#e7ac67</color>
+    <color name="seq_no_color_other">#c0c8cc</color>
+    <!-- 通知栏颜色 -->
+    <color name="bg_notification_bg">#ff31393d</color>
+    <color name="bg_notification_bt_press">#ff19a0e4</color>
+    <!-- 好声音颜色 -->
+    <color name="voice_poplistview_driver">#ff4a4a4a</color>
+    <color name="voice_list_orange">#fff7551d</color>
+    <color name="voice_list_dark">#ffadadad</color>
+    <color name="text_color_light_grey">#667780</color>
+    <color name="text_color_dialog_confirm_cancel">#ff4b5c66</color>
+
+    <!-- player -->
+    <color name="player_operation_btn_normal">#ff31393d</color>
+    <color name="player_operation_btn_press">#ff252c30</color>
+    
+    <!-- player queue -->
+    <color name="player_queue_press">#cc313939</color>
+    
+    <!-- desk lyric -->
+    <color name="desk_lyric_set_nor">#cc31393d</color>
+    <color name="desk_lyric_set_press">@color/bg_notification_bt_press</color>
+    <color name="desk_lyric_set_select">#99000000</color>
+
+</resources>
