@@ -1,9 +1,44 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_forUI"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:id="@+id/mainContainer"
-     >
+    android:orientation="vertical" >
 
+    <Chronometer
+        android:id="@+id/chronometer1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        />
+
+    <Button
+        android:id="@+id/buttonPopup"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="popupWindow" />
+    
+    <Button
+        android:id="@+id/buttonActionMode"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:onClick="buttonActionMode"
+        android:text="buttonActionMode" />
+
+    <TextView
+        android:id="@id/ids_myId_textview1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="idsTest" />
+    
+    <TextView
+        android:id="@id/ids_myId_textview1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        style="@style/style_my_textview_field"
+        android:textSize="18sp"
+        android:text="this style is from my style own" />
+    
 </LinearLayout>

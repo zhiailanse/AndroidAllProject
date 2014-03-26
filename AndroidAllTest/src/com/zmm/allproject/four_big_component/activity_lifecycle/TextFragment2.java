@@ -9,16 +9,16 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 public class TextFragment2 extends FragmentForConsole {
-	
+
 	String name = "blank";
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		
-		if(getArguments() != null){
+
+		if (getArguments() != null) {
 			String name = getArguments().getString("name");
-			if(name != null){
+			if (name != null) {
 				this.name = name;
 			}
 		}
@@ -33,5 +33,5 @@ public class TextFragment2 extends FragmentForConsole {
 		tv.setText(sb.toString());
 		return tv;
 	}
-	
+
 }

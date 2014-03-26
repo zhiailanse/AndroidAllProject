@@ -10,9 +10,9 @@ import android.content.res.Configuration;
 import android.os.IBinder;
 
 public class AllService extends Service {
-	
+
 	public static String AllServiceAction = "com.zmm.allproject.AllService";
-	
+
 	@Override
 	public void onCreate() {
 		AllApplication.allDebug(this, "onCreate");
@@ -29,7 +29,6 @@ public class AllService extends Service {
 		super.onDestroy();
 		AllApplication.allDebug(this, "onDestroy");
 	}
-
 
 	@Override
 	public int onStartCommand(Intent intent, int flags, int startId) {

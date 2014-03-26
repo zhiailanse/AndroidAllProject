@@ -16,23 +16,23 @@ public class LifecycleActivity2 extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		System.out.println("LifecycleActivity2.onCreate()");
-		
+
 		String msg = getIntent().getStringExtra("msg");
-		
-		if(msg != null && msg.equals("startActivityForResult")){
-			AllApplication.allDebug(this, "receive command startActivityForResult");
+
+		if (msg != null && msg.equals("startActivityForResult")) {
+			AllApplication.allDebug(this,
+					"receive command startActivityForResult");
 			Intent data = new Intent();
 			data.putExtra("msg", "this msg is from second Activity");
 			setResult(888, data);
 			finish();
 		}
-		
+
 	}
-	
 
 	@Override
 	public View onCreateView(String name, Context context, AttributeSet attrs) {
-//		System.out.println("LifecycleActivity2.onCreateView()1");
+		// System.out.println("LifecycleActivity2.onCreateView()1");
 		return super.onCreateView(name, context, attrs);
 	}
 
@@ -40,10 +40,10 @@ public class LifecycleActivity2 extends Activity {
 	@Override
 	public View onCreateView(View parent, String name, Context context,
 			AttributeSet attrs) {
-//		System.out.println("LifecycleActivity2.onCreateView()2");
+		// System.out.println("LifecycleActivity2.onCreateView()2");
 		return super.onCreateView(parent, name, context, attrs);
 	}
-	
+
 	@Override
 	public void onBackPressed() {
 		AllApplication.allDebug(this, "onBackPressed");
@@ -91,5 +91,5 @@ public class LifecycleActivity2 extends Activity {
 		super.onStop();
 		System.out.println("LifecycleActivity2.onStop()");
 	}
-	
+
 }

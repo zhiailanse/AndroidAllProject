@@ -17,8 +17,7 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 
 public class Fragment4CP extends ListFragmentForConsole {
-	
-	
+
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -29,14 +28,18 @@ public class Fragment4CP extends ListFragmentForConsole {
 			Bundle savedInstanceState) {
 		return inflater.inflate(R.layout.activity_contain_fragment, null);
 	}
-	
-	String[] objects = {"this is for ContentProvider"};
-	
+
+	String[] objects = { "this is for ContentProvider" };
+
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		super.onActivityCreated(savedInstanceState);
-		getListView().setAdapter(new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_activated_1, objects));
-		
+		getListView()
+				.setAdapter(
+						new ArrayAdapter<String>(getActivity(),
+								android.R.layout.simple_list_item_activated_1,
+								objects));
+
 		getListView().setOnItemClickListener(new OnItemClickListener() {
 
 			@Override
@@ -44,20 +47,22 @@ public class Fragment4CP extends ListFragmentForConsole {
 					long arg3) {
 				switch (arg2) {
 				case 0:
-					Intent intent = new Intent(getActivity(),ActivityForLifecycle.class);
+					Intent intent = new Intent(getActivity(),
+							ActivityForLifecycle.class);
 					startActivity(intent);
 					break;
 
 				case 1:
-					Intent intent2 = new Intent(getActivity(),MyPreferenceActivity.class);
+					Intent intent2 = new Intent(getActivity(),
+							MyPreferenceActivity.class);
 					startActivity(intent2);
 					break;
 				default:
 					break;
 				}
-				
+
 			}
 		});
 	}
-	
+
 }

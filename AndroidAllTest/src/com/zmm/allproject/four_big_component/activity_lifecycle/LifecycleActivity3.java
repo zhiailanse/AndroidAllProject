@@ -20,7 +20,7 @@ public class LifecycleActivity3 extends Activity {
 
 	@Override
 	public View onCreateView(String name, Context context, AttributeSet attrs) {
-//		System.out.println("LifecycleActivity3.onCreateView()1");
+		// System.out.println("LifecycleActivity3.onCreateView()1");
 		return super.onCreateView(name, context, attrs);
 	}
 
@@ -28,10 +28,10 @@ public class LifecycleActivity3 extends Activity {
 	@Override
 	public View onCreateView(View parent, String name, Context context,
 			AttributeSet attrs) {
-//		System.out.println("LifecycleActivity3.onCreateView()2");
+		// System.out.println("LifecycleActivity3.onCreateView()2");
 		return super.onCreateView(parent, name, context, attrs);
 	}
-	
+
 	@Override
 	public void onBackPressed() {
 		AllApplication.allDebug(this, "onBackPressed");
@@ -79,5 +79,5 @@ public class LifecycleActivity3 extends Activity {
 		super.onStop();
 		System.out.println("LifecycleActivity3.onStop()");
 	}
-	
+
 }

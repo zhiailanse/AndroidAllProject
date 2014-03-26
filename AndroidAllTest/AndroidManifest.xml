@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="9"
+        android:minSdkVersion="15"
         android:targetSdkVersion="15" />
     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
 
@@ -42,10 +42,14 @@
             >
         </activity>
         <activity 
-            android:name="com.zmm.allproject.four_big_component.activity_lifecycle.ForUI"
+            android:name="com.zmm.allproject.four_big_component.simpleUI.ForUI"
+            android:theme="@style/Theme.Sherlock.Light"
             android:label="ForUI"
             >
         </activity>
+        <activity 
+            android:label="AboutActivity"
+            android:name="com.zmm.allproject.mainUI.AboutActivity"></activity>
         
         <service 
             android:name="com.zmm.allproject.four_big_component.service.AllServicevice"

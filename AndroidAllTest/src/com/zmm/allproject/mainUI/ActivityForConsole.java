@@ -17,15 +17,17 @@ public class ActivityForConsole extends FragmentActivity {
 	@Override
 	public void onAttachFragment(Fragment fragment) {
 		super.onAttachFragment(fragment);
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	public void onAttachedToWindow() {
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 		super.onAttachedToWindow();
 	}
@@ -33,80 +35,90 @@ public class ActivityForConsole extends FragmentActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
-	
+
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	protected void onNewIntent(Intent intent) {
 		super.onNewIntent(intent);
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	protected void onPause() {
 		super.onPause();
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	protected void onRestart() {
 		super.onRestart();
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	protected void onResume() {
 		super.onResume();
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	protected void onStart() {
 		super.onStart();
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 
 	@Override
 	protected void onStop() {
 		super.onStop();
-		if(debug){
-			System.out.println(this.getClass().getSimpleName() + "---" + new Exception().getStackTrace()[1].getMethodName());
+		if (debug) {
+			System.out.println(this.getClass().getSimpleName() + "---"
+					+ new Exception().getStackTrace()[1].getMethodName());
 		}
 	}
 

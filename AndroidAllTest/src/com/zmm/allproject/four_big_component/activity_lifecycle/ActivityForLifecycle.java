@@ -9,39 +9,22 @@ import android.os.Bundle;
 import android.view.View;
 
 public class ActivityForLifecycle extends ActivityForConsole {
-	
+
 	/*
 	 * (non-Javadoc)
-	 * @see android.app.Activity#onAttachFragment(android.app.Fragment)
-	 * Activity lifecycle begin:
-	 * onCreate
-	 * onStart
-	 * onResume
 	 * 
-	 * while jump to another Activity :
-	 * onPause
-	 * onSaveInstanceState
-	 * onStop
+	 * @see android.app.Activity#onAttachFragment(android.app.Fragment) Activity
+	 * lifecycle begin: onCreate onStart onResume
 	 * 
-	 * while back to the orignal Activity :
-	 * onRestart 
-	 * onStart
-	 * onResume
+	 * while jump to another Activity : onPause onSaveInstanceState onStop
 	 * 
-	 * while backPress :
-	 * onPause
-	 * onStop
-	 * onDestroy
+	 * while back to the orignal Activity : onRestart onStart onResume
 	 * 
-	 * while shutDown the phone :
-	 * onPause
-	 * onSaveInstanceState
-	 * onStop
+	 * while backPress : onPause onStop onDestroy
 	 * 
-	 * while start a themeDialogActivity
-	 * onPause
-	 * onSaveInstanceState
+	 * while shutDown the phone : onPause onSaveInstanceState onStop
 	 * 
+	 * while start a themeDialogActivity onPause onSaveInstanceState
 	 */
 
 	@Override
@@ -54,44 +37,48 @@ public class ActivityForLifecycle extends ActivityForConsole {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.lifecycle_activity);
 	}
-	
-	//onClick
-	public void gotoSecondActivity(View view){
+
+	// onClick
+	public void gotoSecondActivity(View view) {
 		AllApplication.allDebug(this, "gotoSecondActivity");
-		Intent intent = new Intent(this,LifecycleActivity2.class);
+		Intent intent = new Intent(this, LifecycleActivity2.class);
 		startActivity(intent);
 	}
-	public void gotoThemeDialogActivity(View view){
+
+	public void gotoThemeDialogActivity(View view) {
 		AllApplication.allDebug(this, "gotoSecondActivity");
-		Intent intent = new Intent(this,LifecycleActivity3.class);
+		Intent intent = new Intent(this, LifecycleActivity3.class);
 		startActivity(intent);
 	}
-	public void startActivityForResult(View view){
+
+	public void startActivityForResult(View view) {
 		AllApplication.allDebug(this, "gotoSecondActivity");
-		Intent intent = new Intent(this,LifecycleActivity2.class);
+		Intent intent = new Intent(this, LifecycleActivity2.class);
 		intent.putExtra("msg", "startActivityForResult");
-		startActivityForResult(intent,888);
+		startActivityForResult(intent, 888);
 	}
-	public void forSystemExit(View view){
+
+	public void forSystemExit(View view) {
 		System.out.println("ActivityForLifecycle.forSystemExit()");
 		AllApplication.shutDown();
-		//useless
-//		ActivityManager manager = (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
-//		manager.restartPackage(getPackageName());
+		// useless
+		// ActivityManager manager =
+		// (ActivityManager)getSystemService(Context.ACTIVITY_SERVICE);
+		// manager.restartPackage(getPackageName());
 	}
-	
+
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		super.onActivityResult(requestCode, resultCode, data);
 		System.out.println("ActivityForLifecycle.onActivityResult()");
-		if(requestCode == 888){
-			if(data != null){
+		if (requestCode == 888) {
+			if (data != null) {
 				String result = data.getStringExtra("msg");
-				if(result != null){
+				if (result != null) {
 					AllApplication.allDebug(ActivityForLifecycle.this, result);
 				}
 			}
 		}
 	}
-	
+
 }
