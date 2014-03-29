@@ -18,7 +18,9 @@ public class AllService extends Service {
 		AllApplication.allDebug(this, "onCreate");
 		Intent intent = new Intent(MyBroadcaseRecever.BRActionOne);
 		intent.putExtra("msg", "msg1");
-		sendBroadcast(intent);
+//		sendStickyBroadcast(intent);
+//		sendBroadcast(intent);
+		sendOrderedBroadcast(intent, "com.zmm.allproject.permission");
 		super.onCreate();
 	}
 

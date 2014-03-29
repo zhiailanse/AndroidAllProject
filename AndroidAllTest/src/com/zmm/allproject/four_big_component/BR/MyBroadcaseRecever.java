@@ -12,7 +12,6 @@ public class MyBroadcaseRecever extends BroadcastReceiver {
 	@Override
 	public void onReceive(Context context, Intent intent) {
 		System.out.println("--"+intent.getAction());
-		System.out.println(")))))))))))))))))))");
 		String s = Intent.ACTION_SCREEN_OFF;
 		
 //		try {
@@ -30,7 +29,7 @@ public class MyBroadcaseRecever extends BroadcastReceiver {
 			System.out.println(")))))))))receive msg2))))))))))");
 		}
 		
-		if(intent.getAction().equals(s)){
+		if(intent.getAction().equals(Intent.ACTION_AIRPLANE_MODE_CHANGED)){
 			System.out.println(Intent.ACTION_AIRPLANE_MODE_CHANGED);
 			System.out.println(Settings.System.getInt(context.getContentResolver(),
                 Settings.System.AIRPLANE_MODE_ON, 0) + "-");

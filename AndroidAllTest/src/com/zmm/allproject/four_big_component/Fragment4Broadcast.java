@@ -1,6 +1,7 @@
 package com.zmm.allproject.four_big_component;
 
 import com.zmm.allproject.R;
+import com.zmm.allproject.four_big_component.BR.MyBroadcaseRecever;
 import com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForLifecycle;
 import com.zmm.allproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
 import com.zmm.allproject.mainUI.ListFragmentForConsole;
@@ -31,13 +32,14 @@ public class Fragment4Broadcast extends ListFragmentForConsole {
 			
 			@Override
 			public void onReceive(Context context, Intent intent) {
+				//for sticky broadCastReceiver : each time open this fragment ,will on receiver!
 				Toast.makeText(getActivity(), "onReceive", 0).show();
 				System.out.println("++++onReceive++++++");
 			}
 		};
 		
 		IntentFilter filter = new IntentFilter();
-		filter.addAction(MyBRAction);
+		filter.addAction(MyBroadcaseRecever.BRActionOne);
 		getActivity().registerReceiver(br, filter);
 	}
 
