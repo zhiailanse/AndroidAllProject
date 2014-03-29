@@ -1,26 +1,44 @@
 package com.zmm.allproject.four_big_component;
 
 import com.zmm.allproject.R;
-import com.zmm.allproject.R.layout;
 import com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForLifecycle;
 import com.zmm.allproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
 import com.zmm.allproject.mainUI.ListFragmentForConsole;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.os.Bundle;
-import android.support.v4.app.ListFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+import android.widget.Toast;
 
 public class Fragment4Broadcast extends ListFragmentForConsole {
+	
+	BroadcastReceiver br = null;
+	public static String MyBRAction = "com.zmm.allproject.Fragment4Broadcast";
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
+		br = new BroadcastReceiver() {
+			
+			@Override
+			public void onReceive(Context context, Intent intent) {
+				Toast.makeText(getActivity(), "onReceive", 0).show();
+				System.out.println("++++onReceive++++++");
+			}
+		};
+		
+		IntentFilter filter = new IntentFilter();
+		filter.addAction(MyBRAction);
+		getActivity().registerReceiver(br, filter);
 	}
 
 	@Override

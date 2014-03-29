@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".four_big_component.simpleUI.SoftkeyboardAndUserEvent" >
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textAutoComplete"
+        android:hint="textCapCharacters"
+        android:ems="10" >
+
+    </EditText>
+    
+    <EditText
+        android:id="@+id/editTextOnFocus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:hint="testOnFocusChangeListener"
+        android:ems="10" >
+
+    </EditText>
+    
+    <Button
+        android:id="@+id/buttonLongPress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LongPressObserver"
+        >
+
+    </Button>
+    
+    <Button
+        android:id="@+id/buttonAnother"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="buttonAnother"
+        >
+
+    </Button>
+
+</LinearLayout>

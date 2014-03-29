@@ -6,13 +6,18 @@ import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.ContextMenu;
 import android.view.ContextMenu.ContextMenuInfo;
+import android.view.GestureDetector;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.View.OnGenericMotionListener;
+import android.view.View.OnTouchListener;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.Button;
 import android.widget.Chronometer;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -53,6 +58,8 @@ public class ForUI extends SherlockActivity {
 
 		chro = (Chronometer) findViewById(R.id.chronometer1);
 		registerForContextMenu(chro);
+		String s = "rr";
+//		chro.setFormat("Longpress me , I have contextMenu : %s");
 		bttn = (Button) findViewById(R.id.buttonPopup);
 
 		LinearLayout layout = new LinearLayout(this);
@@ -82,6 +89,7 @@ public class ForUI extends SherlockActivity {
 
 		tvIds = (TextView) findViewById(R.id.ids_myId_textview1);
 		tvIds.setText("My id is from ids.xml! ha....");
+		
 	}
 
 	public void buttonActionMode(View v) {
@@ -109,7 +117,14 @@ public class ForUI extends SherlockActivity {
 
 			@Override
 			public boolean onActionItemClicked(ActionMode arg0,
-					com.actionbarsherlock.view.MenuItem arg1) {
+					com.actionbarsherlock.view.MenuItem item) {
+				if(item.getItemId() == R.id.start_timer){
+					chro.start();
+				}else if(item.getItemId() == R.id.stop_timer){
+					chro.stop();
+				}else if(item.getItemId() == R.id.reset_timer){
+					chro.setBase(SystemClock.elapsedRealtime());
+				}
 				return false;
 			}
 		});

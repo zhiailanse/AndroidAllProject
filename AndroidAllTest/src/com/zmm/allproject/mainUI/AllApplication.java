@@ -17,6 +17,7 @@ public class AllApplication extends Application {
 	@Override
 	public void onCreate() {
 		allDebug(this, "AllApplication OnCreate ..");
+		System.out.println("AllApplication OnCreate ..");
 		super.onCreate();
 	}
 

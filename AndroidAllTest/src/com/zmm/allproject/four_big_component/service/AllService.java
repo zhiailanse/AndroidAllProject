@@ -1,7 +1,7 @@
 package com.zmm.allproject.four_big_component.service;
 
-import java.security.AllPermission;
-
+import com.zmm.allproject.four_big_component.Fragment4Broadcast;
+import com.zmm.allproject.four_big_component.BR.MyBroadcaseRecever;
 import com.zmm.allproject.mainUI.AllApplication;
 
 import android.app.Service;
@@ -16,6 +16,9 @@ public class AllService extends Service {
 	@Override
 	public void onCreate() {
 		AllApplication.allDebug(this, "onCreate");
+		Intent intent = new Intent(MyBroadcaseRecever.BRActionOne);
+		intent.putExtra("msg", "msg1");
+		sendBroadcast(intent);
 		super.onCreate();
 	}
 
@@ -28,6 +31,9 @@ public class AllService extends Service {
 	public void onDestroy() {
 		super.onDestroy();
 		AllApplication.allDebug(this, "onDestroy");
+		Intent intent = new Intent(MyBroadcaseRecever.BRActionOne);
+		intent.putExtra("msg", "msg2");
+		sendBroadcast(intent);
 	}
 
 	@Override

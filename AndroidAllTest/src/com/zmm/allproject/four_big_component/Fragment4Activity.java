@@ -5,6 +5,10 @@ import com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForFragm
 import com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForLifecycle;
 import com.zmm.allproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
 import com.zmm.allproject.four_big_component.simpleUI.ForUI;
+import com.zmm.allproject.four_big_component.simpleUI.GestureActivity;
+import com.zmm.allproject.four_big_component.simpleUI.MatrixAndDrawViewActivity;
+import com.zmm.allproject.four_big_component.simpleUI.OrientationEventActivity;
+import com.zmm.allproject.four_big_component.simpleUI.SoftkeyboardAndUserEventActivity;
 import com.zmm.allproject.mainUI.ListFragmentForConsole;
 
 import android.content.Intent;
@@ -30,7 +34,12 @@ public class Fragment4Activity extends ListFragmentForConsole {
 	}
 
 	String[] objects = { "forActivityLifecycle", "toPreferencesActivity",
-			"forFragmentLifecycle", "simpleUIs" };
+			"forFragmentLifecycle", "simpleUIs" 
+			,"SoftkeyboardAndUserEvent"
+			,"GestureActivity"
+			,"MatrixAndDrawViewActivity"
+			,"OrientationEventActivity"
+			};
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -66,6 +75,22 @@ public class Fragment4Activity extends ListFragmentForConsole {
 				case 3:
 					Intent intent4 = new Intent(getActivity(), ForUI.class);
 					startActivity(intent4);
+					break;
+				case 4:
+					Intent intent5 = new Intent(getActivity(), SoftkeyboardAndUserEventActivity.class);
+					startActivity(intent5);
+					break;
+				case 5:
+					Intent intent6 = new Intent(getActivity(), GestureActivity.class);
+					startActivity(intent6);
+					break;
+				case 6:
+					Intent intent7 = new Intent(getActivity(), MatrixAndDrawViewActivity.class);
+					startActivity(intent7);
+					break;
+				case 7:
+					Intent intent8 = new Intent(getActivity(), OrientationEventActivity.class);
+					startActivity(intent8);
 					break;
 				default:
 					break;

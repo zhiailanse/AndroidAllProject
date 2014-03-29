@@ -1,16 +1,20 @@
 package com.zmm.allproject.mainUI;
 
-import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
-import com.zmm.allproject.R;
-import com.zmm.allproject.four_big_component.ViewpagerIndicatorMainFragment;
-
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.view.KeyEvent;
 import android.view.Window;
 
-public class MainActivity extends ActivityForConsole {
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+import com.zmm.allproject.R;
+import com.zmm.allproject.four_big_component.ViewpagerIndicatorMainFragment;
+import com.zmm.allproject.four_big_component.service.AllService;
+
+public class MainActivity extends ActivityForConsole implements MainMenu.OnItemOneClickListener{
 
 	private SlidingMenu slideMenu;
+	Fragment mainMenu ;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +23,11 @@ public class MainActivity extends ActivityForConsole {
 		getWindow().requestFeature(Window.FEATURE_NO_TITLE);
 
 		setContentView(R.layout.main);
+		System.out.println("thread id : "+Thread.currentThread().getId());
 
-		// start service
-		// Intent serviceIntent = new Intent(AllService.AllServiceAction);
-		// startService(serviceIntent);
+//		 start service
+		 Intent serviceIntent = new Intent(AllService.AllServiceAction);
+		 startService(serviceIntent);
 
 		// initialize slideingMenu
 		slideMenu = new SlidingMenu(this);
@@ -35,8 +40,9 @@ public class MainActivity extends ActivityForConsole {
 		slideMenu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
 		slideMenu.setMenu(R.layout.menu_frame);
 
+		mainMenu = new MainMenu();
 		getSupportFragmentManager().beginTransaction()
-				.replace(R.id.menu_frame, new MainMenu()).commit();
+				.replace(R.id.menu_frame, mainMenu).commit();
 
 		getSupportFragmentManager()
 				.beginTransaction()
@@ -49,6 +55,10 @@ public class MainActivity extends ActivityForConsole {
 				System.out.println(msg + " from onCreate()");
 			}
 		}
+	}
+	
+	public void toggle(){
+		slideMenu.toggle();
 	}
 
 	@Override
@@ -120,9 +130,14 @@ public class MainActivity extends ActivityForConsole {
 
 	@Override
 	protected void onDestroy() {
-		// Intent serviceIntent = new Intent(AllService.AllServiceAction);
-		// stopService(serviceIntent);
+		 Intent serviceIntent = new Intent(AllService.AllServiceAction);
+		 stopService(serviceIntent);
 		super.onDestroy();
+	}
+
+	@Override
+	public void onItemOneClick() {
+		slideMenu.toggle();
 	}
 
 }

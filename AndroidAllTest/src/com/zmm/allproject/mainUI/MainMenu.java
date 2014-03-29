@@ -2,6 +2,7 @@ package com.zmm.allproject.mainUI;
 
 import com.zmm.allproject.R;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,13 +17,25 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainMenu extends ListFragment {
-
+	
 	public static String[] menuArray = { "四大组件", "多线程，同步", "关于", "退出" };
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 
+	}
+	
+	public interface OnItemOneClickListener{
+		void onItemOneClick(); 
+	}
+	
+	OnItemOneClickListener oneClickListener = null;
+	
+	@Override
+	public void onAttach(Activity activity) {
+		super.onAttach(activity);
+		oneClickListener = (OnItemOneClickListener) getActivity();
 	}
 
 	@Override
@@ -49,10 +62,15 @@ public class MainMenu extends ListFragment {
 					long arg3) {
 				switch (arg2) {
 				case 0:
-					Intent intent1 = new Intent();
-					intent1.setClass(getActivity(), MainActivity.class);
-					intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-					startActivity(intent1);
+//					getActivity();
+//					Intent intent1 = new Intent();
+//					intent1.setClass(getActivity(), MainActivity.class);
+//					intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+//					startActivity(intent1);
+					if(oneClickListener != null){
+						oneClickListener.onItemOneClick();
+					}
+					
 					break;
 				case 1:
 					Intent intent2 = new Intent();

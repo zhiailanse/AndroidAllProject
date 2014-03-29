@@ -9,7 +9,7 @@
         android:targetSdkVersion="15" />
     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
 
-    <application
+    <application 
         android:name="com.zmm.allproject.mainUI.AllApplication"
         android:process="com.zmm.allproject"
         android:allowBackup="true"
@@ -43,19 +43,50 @@
         </activity>
         <activity 
             android:name="com.zmm.allproject.four_big_component.simpleUI.ForUI"
-            android:theme="@style/Theme.Sherlock.Light"
+            android:theme="@style/Theme.Sherlock.Light.DarkActionBar"
             android:label="ForUI"
             >
         </activity>
         <activity 
             android:label="AboutActivity"
             android:name="com.zmm.allproject.mainUI.AboutActivity"></activity>
+        <activity 
+            android:label="SoftkeyboardAndUserEvent"
+            android:name="com.zmm.allproject.four_big_component.simpleUI.SoftkeyboardAndUserEventActivity">
+            
+        </activity>
+        <activity 
+            android:label="GestureActivity"
+            android:name="com.zmm.allproject.four_big_component.simpleUI.GestureActivity"
+            >
+            
+        </activity>
+        <activity 
+            android:name="com.zmm.allproject.four_big_component.simpleUI.MatrixAndDrawViewActivity"
+            android:label="MatrixAndDrawViewActivity">
+            
+        </activity>
+        <activity 
+            android:name="com.zmm.allproject.four_big_component.simpleUI.OrientationEventActivity"
+            android:label="OrientationEventActivity">
+            
+        </activity>
+        
+        
+        <receiver android:name="com.zmm.allproject.four_big_component.BR.MyBroadcaseRecever">
+            <intent-filter >
+                <action android:name="com.zmm.allproject.MyBroadcaseRecever"/>
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
+                <action android:name="android.intent.action.SCREEN_OFF"/>
+            </intent-filter>
+        </receiver>
         
         <service 
-            android:name="com.zmm.allproject.four_big_component.service.AllServicevice"
+            android:name="com.zmm.allproject.four_big_component.service.AllService"
             >
             <intent-filter >
                 <action android:name="com.zmm.allproject.AllService"/>
+                <action android:name="android.intent.action.AIRPLANE_MODE"/>
             </intent-filter>
         </service>
     </application>
