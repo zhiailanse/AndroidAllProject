@@ -42,8 +42,8 @@ public class MyPreferenceActivity extends PreferenceActivity {
 			}
 		});
 
-		String key = preference.getKey().toString();
-		if (key.equals("CheckBox1")) {
+		String key = preference.getKey();
+		if (key != null && key.equals("CheckBox1")) {
 			AllApplication.allDebug(MyPreferenceActivity.this,
 					"CheckBox1.onClick");
 		}

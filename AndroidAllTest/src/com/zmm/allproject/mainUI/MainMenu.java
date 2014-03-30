@@ -1,6 +1,7 @@
 package com.zmm.allproject.mainUI;
 
 import com.zmm.allproject.R;
+import com.zmm.allproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -18,7 +19,7 @@ import android.widget.TextView;
 
 public class MainMenu extends ListFragment {
 	
-	public static String[] menuArray = { "四大组件", "多线程，同步", "关于", "退出" };
+	public static String[] menuArray = { "四大组件", "多线程，同步", "关于","设置", "退出" };
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -62,15 +63,9 @@ public class MainMenu extends ListFragment {
 					long arg3) {
 				switch (arg2) {
 				case 0:
-//					getActivity();
-//					Intent intent1 = new Intent();
-//					intent1.setClass(getActivity(), MainActivity.class);
-//					intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-//					startActivity(intent1);
 					if(oneClickListener != null){
 						oneClickListener.onItemOneClick();
 					}
-					
 					break;
 				case 1:
 					Intent intent2 = new Intent();
@@ -84,9 +79,13 @@ public class MainMenu extends ListFragment {
 					break;
 
 				case 3:
+					Intent intent3 = new Intent();
+					intent3.setClass(getActivity(), MyPreferenceActivity.class);
+					startActivity(intent3);
+					break;
+				case 4:
 					System.exit(0);
 					break;
-
 				default:
 					break;
 				}

@@ -25,10 +25,6 @@ public class MainActivity extends ActivityForConsole implements MainMenu.OnItemO
 		setContentView(R.layout.main);
 		System.out.println("thread id : "+Thread.currentThread().getId());
 
-//		 start service
-		 Intent serviceIntent = new Intent(AllService.AllServiceAction);
-		 startService(serviceIntent);
-
 		// initialize slideingMenu
 		slideMenu = new SlidingMenu(this);
 		slideMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_NONE);
@@ -130,8 +126,6 @@ public class MainActivity extends ActivityForConsole implements MainMenu.OnItemO
 
 	@Override
 	protected void onDestroy() {
-		 Intent serviceIntent = new Intent(AllService.AllServiceAction);
-		 stopService(serviceIntent);
 		super.onDestroy();
 	}
 

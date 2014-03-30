@@ -91,9 +91,14 @@
             >
             <intent-filter >
                 <action android:name="com.zmm.allproject.AllService"/>
-                <action android:name="android.intent.action.AIRPLANE_MODE"/>
             </intent-filter>
         </service>
+        <service android:name="com.zmm.allproject.four_big_component.service.AIDLServiceEntity">
+            <intent-filter >
+                <action android:name="com.zmm.allproject.four_big_component.service.AIDLServiceEntity"/>
+            </intent-filter>
+        </service>
+        
     </application>
 
 </manifest>
