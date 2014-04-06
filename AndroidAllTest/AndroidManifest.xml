@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.zmm.allproject"
+    package="com.zmm.androidallproject"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -9,18 +9,20 @@
         android:targetSdkVersion="15" />
     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
     <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
-    <uses-permission android:name="com.zmm.allproject.permission"/>
-    <permission android:protectionLevel="normal" android:name="com.zmm.allproject.permission"></permission>
+    <uses-permission android:name="com.zmm.androidallproject.permission"/>
+      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    
+    <permission android:protectionLevel="normal" android:name="com.zmm.androidallproject.permission"></permission>
 
     <application 
-        android:name="com.zmm.allproject.mainUI.AllApplication"
-        android:process="com.zmm.allproject"
+        android:name="com.zmm.androidallproject.mainUI.AllApplication"
+        android:process="com.zmm.androidallproject"
         android:allowBackup="true"
         android:icon="@drawable/ic_icon"
         android:label="@string/app_name"
         >
         <activity
-            android:name="com.zmm.allproject.mainUI.MainActivity"
+            android:name="com.zmm.androidallproject.mainUI.MainActivity"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:label="@string/app_name" >
             <intent-filter>
@@ -30,55 +32,76 @@
             </intent-filter>
         </activity>
         
-        <activity android:name="com.zmm.allproject.four_big_component.activity_lifecycle.MyPreferenceActivity"></activity>
-        <activity android:name="com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForLifecycle" android:label="ActivityForLifecycle"></activity>
-        <activity android:name="com.zmm.allproject.four_big_component.activity_lifecycle.LifecycleActivity2" android:label="LifecycleActivity2"></activity>
+        <activity android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.MyPreferenceActivity"></activity>
+        <activity android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.ActivityForLifecycle" android:label="ActivityForLifecycle"></activity>
+        <activity android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.LifecycleActivity2" android:label="LifecycleActivity2"></activity>
         <activity 
-            android:name="com.zmm.allproject.four_big_component.activity_lifecycle.LifecycleActivity3" 
+            android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.LifecycleActivity3" 
             android:theme="@android:style/Theme.Dialog"
             android:label="ThemeDialogActivity"
             >
         </activity>
         <activity 
             android:label="ActivityForFragmentLifecycle"
-            android:name="com.zmm.allproject.four_big_component.activity_lifecycle.ActivityForFragmentLifecycle"
+            android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.ActivityForFragmentLifecycle"
             >
         </activity>
         <activity 
-            android:name="com.zmm.allproject.four_big_component.simpleUI.ForUI"
+            android:name="com.zmm.androidallproject.four_big_component.simpleUI.ForUI"
             android:theme="@style/Theme.Sherlock.Light.DarkActionBar"
             android:label="ForUI"
             >
         </activity>
         <activity 
             android:label="AboutActivity"
-            android:name="com.zmm.allproject.mainUI.AboutActivity"></activity>
+            android:name="com.zmm.androidallproject.mainUI.AboutActivity"></activity>
         <activity 
             android:label="SoftkeyboardAndUserEvent"
-            android:name="com.zmm.allproject.four_big_component.simpleUI.SoftkeyboardAndUserEventActivity">
+            android:name="com.zmm.androidallproject.four_big_component.simpleUI.SoftkeyboardAndUserEventActivity">
             
         </activity>
         <activity 
             android:label="GestureActivity"
-            android:name="com.zmm.allproject.four_big_component.simpleUI.GestureActivity"
+            android:name="com.zmm.androidallproject.four_big_component.simpleUI.GestureActivity"
             >
             
         </activity>
         <activity 
-            android:name="com.zmm.allproject.four_big_component.simpleUI.MatrixAndDrawViewActivity"
+            android:name="com.zmm.androidallproject.four_big_component.simpleUI.MatrixAndDrawViewActivity"
             android:label="MatrixAndDrawViewActivity">
             
         </activity>
         <activity 
-            android:name="com.zmm.allproject.four_big_component.simpleUI.OrientationEventActivity"
+            android:name="com.zmm.androidallproject.four_big_component.simpleUI.OrientationEventActivity"
             android:label="OrientationEventActivity">
+            
+        </activity>
+        <activity 
+            android:label="PetTrackerEntryActivity"
+            android:theme="@android:style/Theme.DeviceDefault.Light"
+            android:name="com.zmm.androidallproject.four_big_component.DBandCP.PetTrackerEntryActivity">
+            
+        </activity>
+        <activity 
+            android:label="PetTrackerListActivity"
+            android:name="com.zmm.androidallproject.four_big_component.DBandCP.PetTrackerListActivity">
+            
+        </activity>
+        <activity 
+            android:label="GalleryAsyncActivity"
+            android:name="com.zmm.androidallproject.four_big_component.DBandCP.GalleryAsyncActivity">
+            
+        </activity>
+        <activity 
+            android:label="WidgetsActivity1"
+            android:name="com.zmm.androidallproject.widgets.WidgetsActivity1">
             
         </activity>
         
         
-        <receiver android:name="com.zmm.allproject.four_big_component.BR.MyBroadcaseRecever">
+        <receiver android:name="com.zmm.androidallproject.four_big_component.BR.MyBroadcaseRecever">
             <intent-filter >
-                <action android:name="com.zmm.allproject.MyBroadcaseRecever"/>
+                <action android:name="com.zmm.androidallproject.MyBroadcaseRecever"/>
                 <action android:name="android.intent.action.AIRPLANE_MODE"/>
                 <action android:name="android.intent.action.SCREEN_OFF"/>
                 
@@ -87,15 +110,15 @@
         </receiver>
         
         <service 
-            android:name="com.zmm.allproject.four_big_component.service.AllService"
+            android:name="com.zmm.androidallproject.four_big_component.service.AllService"
             >
             <intent-filter >
-                <action android:name="com.zmm.allproject.AllService"/>
+                <action android:name="com.zmm.androidallproject.AllService"/>
             </intent-filter>
         </service>
-        <service android:name="com.zmm.allproject.four_big_component.service.AIDLServiceEntity">
+        <service android:name="com.zmm.androidallproject.four_big_component.service.AIDLServiceEntity">
             <intent-filter >
-                <action android:name="com.zmm.allproject.four_big_component.service.AIDLServiceEntity"/>
+                <action android:name="com.zmm.androidallproject.four_big_component.service.AIDLServiceEntity"/>
             </intent-filter>
         </service>
         

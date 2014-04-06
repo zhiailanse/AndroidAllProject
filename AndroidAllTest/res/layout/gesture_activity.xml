@@ -12,12 +12,12 @@
         android:onClick="translate"
         android:text="translate" />
     
-    <com.zmm.allproject.four_big_component.simpleUI.MyAttrsView
+    <com.zmm.androidallproject.four_big_component.simpleUI.MyAttrsView
         android:layout_width="wrap_content"
         android:layout_height="100dp"
         android:id="@+id/myAttrsView"
         >
-    </com.zmm.allproject.four_big_component.simpleUI.MyAttrsView>
+    </com.zmm.androidallproject.four_big_component.simpleUI.MyAttrsView>
     
     <ImageView 
         android:layout_width="wrap_content"
