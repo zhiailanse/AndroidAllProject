@@ -13,6 +13,7 @@
       <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     
     <permission android:protectionLevel="normal" android:name="com.zmm.androidallproject.permission"></permission>
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application 
         android:name="com.zmm.androidallproject.mainUI.AllApplication"
@@ -25,6 +26,10 @@
             android:name="com.zmm.androidallproject.mainUI.MainActivity"
             android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen"
             android:label="@string/app_name" >
+            <meta-data 
+                android:name="activity_info"
+                android:value="helloActivity"
+                />
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -40,6 +45,7 @@
             android:theme="@android:style/Theme.Dialog"
             android:label="ThemeDialogActivity"
             >
+            
         </activity>
         <activity 
             android:label="ActivityForFragmentLifecycle"
@@ -97,7 +103,41 @@
             android:name="com.zmm.androidallproject.widgets.WidgetsActivity1">
             
         </activity>
+        <activity 
+            android:label="CPTestActivity"
+            android:name="com.zmm.androidallproject.four_big_component.DBandCP.CPTestActivity">
+            
+        </activity>
+        <activity 
+            android:label="NotificationActivity"
+            android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.NotificationActivity">
+            
+        </activity>
+        <activity 
+            android:label="MultiThreadActivity"
+            android:name="com.zmm.androidallproject.multiThread.MultiThreadActivityMain">
+            
+        </activity>
+        <activity 
+            android:label="HandlerActivity"
+            android:name="com.zmm.androidallproject.multiThread.HandlerActivity">
+            
+        </activity>
+        <activity 
+            android:label="AsynctaskActivity"
+            android:name="com.zmm.androidallproject.multiThread.AsynctaskActivity">
+        </activity>
+        <activity
+            android:label="DispatchKeyEventActivity"
+            android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.DispatchKeyEventActivity">
+            
+        </activity>
         
+        <provider 
+            android:syncable="true"
+            android:authorities="com.zmm.androidallproject.peopleProvider"
+            android:name="com.zmm.androidallproject.four_big_component.DBandCP.MyProvider">
+        </provider>
         
         <receiver android:name="com.zmm.androidallproject.four_big_component.BR.MyBroadcaseRecever">
             <intent-filter >
@@ -108,10 +148,25 @@
             </intent-filter>
             
         </receiver>
+        <receiver 
+            android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.PendingBroadcastReceiver">
+            <intent-filter >
+                <action android:name="PendingBroadcastReceiver"/>
+            </intent-filter>
+            <meta-data
+                android:name="receiver_meta"
+                android:value="helloReceiver"
+                >
+            </meta-data>
+        </receiver>
         
         <service 
             android:name="com.zmm.androidallproject.four_big_component.service.AllService"
             >
+            <meta-data 
+                android:name="service_meta"
+                android:value="helloService"
+                />
             <intent-filter >
                 <action android:name="com.zmm.androidallproject.AllService"/>
             </intent-filter>
@@ -122,6 +177,10 @@
             </intent-filter>
         </service>
         
+        <meta-data
+            android:name="adverts_type"
+            android:value="205" >
+        </meta-data>
     </application>
 
 </manifest>

@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Locale;
 
 import com.zmm.androidallproject.R;
+import com.zmm.androidallproject.four_big_component.DBandCP.CPTestActivity;
 import com.zmm.androidallproject.four_big_component.DBandCP.GalleryAsyncActivity;
 import com.zmm.androidallproject.four_big_component.DBandCP.PetTrackerEntryActivity;
 import com.zmm.androidallproject.mainUI.ListFragmentForConsole;
@@ -45,8 +46,8 @@ public class Fragment4CP extends ListFragmentForConsole {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		
-		createDB();
-		insertSomeValue();
+//		createDB();
+//		insertSomeValue();
 	}
 	
 	public void insertSomeValue(){
@@ -87,7 +88,7 @@ public class Fragment4CP extends ListFragmentForConsole {
 		return inflater.inflate(R.layout.activity_contain_fragment, null);
 	}
 
-	String[] objects = { "toPetsActivity" ,"toAsyncActivity"};
+	String[] objects = { "toPetsActivity" ,"toAsyncActivity","toMyPeopleProvider"};
 
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
@@ -111,6 +112,10 @@ public class Fragment4CP extends ListFragmentForConsole {
 				case 1:
 					Intent intent1 = new Intent(getActivity(),GalleryAsyncActivity.class);
 					getActivity().startActivity(intent1);
+					break;
+				case 2:
+					Intent intent2 = new Intent(getActivity(),CPTestActivity.class);
+					getActivity().startActivity(intent2);
 					break;
 				default:
 					break;

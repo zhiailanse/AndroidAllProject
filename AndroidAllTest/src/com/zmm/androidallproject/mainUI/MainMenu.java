@@ -2,6 +2,7 @@ package com.zmm.androidallproject.mainUI;
 
 import com.zmm.androidallproject.R;
 import com.zmm.androidallproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
+import com.zmm.androidallproject.multiThread.MultiThreadActivityMain;
 import com.zmm.androidallproject.widgets.WidgetsActivity1;
 
 import android.app.Activity;
@@ -70,7 +71,7 @@ public class MainMenu extends ListFragment {
 					break;
 				case 1:
 					Intent intent2 = new Intent();
-					intent2.setClass(getActivity(), AboutActivity.class);
+					intent2.setClass(getActivity(), MultiThreadActivityMain.class);
 					startActivity(intent2);
 					break;
 				case 2:

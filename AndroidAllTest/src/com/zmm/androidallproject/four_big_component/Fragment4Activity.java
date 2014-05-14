@@ -1,16 +1,5 @@
 package com.zmm.androidallproject.four_big_component;
 
-import com.zmm.androidallproject.R;
-import com.zmm.androidallproject.four_big_component.activity_lifecycle.ActivityForFragmentLifecycle;
-import com.zmm.androidallproject.four_big_component.activity_lifecycle.ActivityForLifecycle;
-import com.zmm.androidallproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
-import com.zmm.androidallproject.four_big_component.simpleUI.ForUI;
-import com.zmm.androidallproject.four_big_component.simpleUI.GestureActivity;
-import com.zmm.androidallproject.four_big_component.simpleUI.MatrixAndDrawViewActivity;
-import com.zmm.androidallproject.four_big_component.simpleUI.OrientationEventActivity;
-import com.zmm.androidallproject.four_big_component.simpleUI.SoftkeyboardAndUserEventActivity;
-import com.zmm.androidallproject.mainUI.ListFragmentForConsole;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -19,6 +8,19 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
+
+import com.zmm.androidallproject.R;
+import com.zmm.androidallproject.four_big_component.activity_lifecycle.ActivityForFragmentLifecycle;
+import com.zmm.androidallproject.four_big_component.activity_lifecycle.ActivityForLifecycle;
+import com.zmm.androidallproject.four_big_component.activity_lifecycle.DispatchKeyEventActivity;
+import com.zmm.androidallproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
+import com.zmm.androidallproject.four_big_component.activity_lifecycle.NotificationActivity;
+import com.zmm.androidallproject.four_big_component.simpleUI.ForUI;
+import com.zmm.androidallproject.four_big_component.simpleUI.GestureActivity;
+import com.zmm.androidallproject.four_big_component.simpleUI.MatrixAndDrawViewActivity;
+import com.zmm.androidallproject.four_big_component.simpleUI.OrientationEventActivity;
+import com.zmm.androidallproject.four_big_component.simpleUI.SoftkeyboardAndUserEventActivity;
+import com.zmm.androidallproject.mainUI.ListFragmentForConsole;
 
 public class Fragment4Activity extends ListFragmentForConsole {
 
@@ -39,6 +41,8 @@ public class Fragment4Activity extends ListFragmentForConsole {
 			,"GestureActivity"
 			,"MatrixAndDrawViewActivity"
 			,"OrientationEventActivity"
+			,"Notification"
+			,"DispatchKeyEventActivity"
 			};
 
 	@Override
@@ -91,6 +95,14 @@ public class Fragment4Activity extends ListFragmentForConsole {
 				case 7:
 					Intent intent8 = new Intent(getActivity(), OrientationEventActivity.class);
 					startActivity(intent8);
+					break;
+				case 8:
+					Intent intent9 = new Intent(getActivity(), NotificationActivity.class);
+					startActivity(intent9);
+					break;
+				case 9:
+					Intent intent10 = new Intent(getActivity(), DispatchKeyEventActivity.class);
+					startActivity(intent10);
 					break;
 				default:
 					break;

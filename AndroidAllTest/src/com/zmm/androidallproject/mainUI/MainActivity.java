@@ -1,20 +1,31 @@
 package com.zmm.androidallproject.mainUI;
 
+import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ServiceInfo;
+import android.content.pm.PackageManager.NameNotFoundException;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Window;
+import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.zmm.androidallproject.R;
 import com.zmm.androidallproject.four_big_component.ViewpagerIndicatorMainFragment;
+import com.zmm.androidallproject.four_big_component.activity_lifecycle.PendingBroadcastReceiver;
 import com.zmm.androidallproject.four_big_component.service.AllService;
 
 public class MainActivity extends ActivityForConsole implements MainMenu.OnItemOneClickListener{
 
 	private SlidingMenu slideMenu;
 	Fragment mainMenu ;
+	Context context;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +35,7 @@ public class MainActivity extends ActivityForConsole implements MainMenu.OnItemO
 
 		setContentView(R.layout.main);
 		System.out.println("thread id : "+Thread.currentThread().getId());
+		context = getApplicationContext();
 
 		// initialize slideingMenu
 		slideMenu = new SlidingMenu(this);
@@ -51,6 +63,46 @@ public class MainActivity extends ActivityForConsole implements MainMenu.OnItemO
 				System.out.println(msg + " from onCreate()");
 			}
 		}
+		
+		readMetadata();
+	}
+	
+	/**
+	 * the metadata info is corresponding the ComponentName,
+	 */
+	public void readMetadata(){
+		try {
+			//get application metadata info
+			ApplicationInfo appInfo = this.getPackageManager()
+					.getApplicationInfo(getPackageName(), PackageManager.GET_META_DATA);
+			
+//			String info1 = appInfo.metaData.getString("adverts_type");
+			int info1 = appInfo.metaData.getInt("adverts_type");
+//			Toast.makeText(context, info1+"", 0).show();
+			
+			//in activity ,the meta data info must in the current activity??
+			ActivityInfo activityInfo = this.getPackageManager()
+					.getActivityInfo(getComponentName(), PackageManager.GET_META_DATA);
+			String inforActivity = activityInfo.metaData.getString("activity_info");
+//			Toast.makeText(context, inforActivity, 0).show();
+			
+			//in service
+			ComponentName cn = new ComponentName(context, AllService.class);
+			ServiceInfo serviceInfo = this.getPackageManager()
+					.getServiceInfo(cn, PackageManager.GET_META_DATA);
+			String infoService = serviceInfo.metaData.getString("service_meta");
+			Toast.makeText(context, infoService, 0).show();
+//			Log.d("moon", cn.toString());
+			
+			ComponentName cnReceiver = new ComponentName(context, PendingBroadcastReceiver.class);
+			ActivityInfo receiverInfo = this.getPackageManager()
+					.getReceiverInfo(cnReceiver, PackageManager.GET_META_DATA);
+			Log.d("moon", receiverInfo.metaData.getString("receiver_meta"));
+		} catch (Exception e) {
+			e.printStackTrace();
+			Toast.makeText(context, "catch()...", 1).show();
+		}
+		
 	}
 	
 	public void toggle(){

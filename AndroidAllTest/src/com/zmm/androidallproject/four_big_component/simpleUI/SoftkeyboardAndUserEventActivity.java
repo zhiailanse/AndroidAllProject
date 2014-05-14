@@ -12,6 +12,7 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.ContextMenu;
+import android.view.KeyEvent;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
@@ -31,6 +32,17 @@ public class SoftkeyboardAndUserEventActivity extends Activity {
 	Button btnLongPress = null;
 	Context context = SoftkeyboardAndUserEventActivity.this;
 	EditText editTextFocus = null;
+	
+	
+	@Override
+	public boolean dispatchKeyEvent(KeyEvent event) {
+		return super.dispatchKeyEvent(event);
+	}
+	
+	@Override
+	public boolean dispatchTouchEvent(MotionEvent ev) {
+		return super.dispatchTouchEvent(ev);
+	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
