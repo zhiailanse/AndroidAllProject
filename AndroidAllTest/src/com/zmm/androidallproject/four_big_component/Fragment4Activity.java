@@ -15,6 +15,8 @@ import com.zmm.androidallproject.four_big_component.activity_lifecycle.ActivityF
 import com.zmm.androidallproject.four_big_component.activity_lifecycle.DispatchKeyEventActivity;
 import com.zmm.androidallproject.four_big_component.activity_lifecycle.MyPreferenceActivity;
 import com.zmm.androidallproject.four_big_component.activity_lifecycle.NotificationActivity;
+import com.zmm.androidallproject.four_big_component.activity_lifecycle.ViewFlipperActivity;
+import com.zmm.androidallproject.four_big_component.activity_lifecycle.WebViewActivity;
 import com.zmm.androidallproject.four_big_component.simpleUI.ForUI;
 import com.zmm.androidallproject.four_big_component.simpleUI.GestureActivity;
 import com.zmm.androidallproject.four_big_component.simpleUI.MatrixAndDrawViewActivity;
@@ -43,6 +45,8 @@ public class Fragment4Activity extends ListFragmentForConsole {
 			,"OrientationEventActivity"
 			,"Notification"
 			,"DispatchKeyEventActivity"
+			,"viewFlipperActivity"
+			,"WebViewActivity"
 			};
 
 	@Override
@@ -103,6 +107,14 @@ public class Fragment4Activity extends ListFragmentForConsole {
 				case 9:
 					Intent intent10 = new Intent(getActivity(), DispatchKeyEventActivity.class);
 					startActivity(intent10);
+					break;
+				case 10:
+					Intent intent11 = new Intent(getActivity(), ViewFlipperActivity.class);
+					startActivity(intent11);
+					break;
+				case 11:
+					Intent intent12 = new Intent(getActivity(), WebViewActivity.class);
+					startActivity(intent12);
 					break;
 				default:
 					break;

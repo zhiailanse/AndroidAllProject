@@ -7,13 +7,14 @@
     <uses-sdk
         android:minSdkVersion="9"
         android:targetSdkVersion="15" />
+    
     <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
     <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
     <uses-permission android:name="com.zmm.androidallproject.permission"/>
-      <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
-    
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <permission android:protectionLevel="normal" android:name="com.zmm.androidallproject.permission"></permission>
     <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application 
         android:name="com.zmm.androidallproject.mainUI.AllApplication"
@@ -132,6 +133,15 @@
             android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.DispatchKeyEventActivity">
             
         </activity>
+        <activity 
+            android:label="ViewFlipperActivity"
+            android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.ViewFlipperActivity"
+            ></activity>
+        
+        <activity 
+            android:label="WebViewActivity"
+            android:name="com.zmm.androidallproject.four_big_component.activity_lifecycle.WebViewActivity"
+            ></activity>
         
         <provider 
             android:syncable="true"

@@ -28,7 +28,7 @@ public class MyProvider extends ContentProvider {
 	public static final String PATH_MULTIPLE = "people";
 	public static final Uri content_URI = Uri.parse("content://"+AUTHORITY+"/"+PATH_MULTIPLE);
 	
-	public static final String DEFAULT_SORT_ORDER = "name DESC";
+	public static final String DEFAULT_SORT_ORDER = "_id DESC";
 	public static final String _ID = "_id";
 	public static final String NAME = "name";
 	public static final String PHONE = "phone";
@@ -102,6 +102,7 @@ public class MyProvider extends ContentProvider {
 
 	@Override
 	public Uri insert(Uri uri, ContentValues values) {
+		Log.d("moon", "blob");
 		long rowId = 0l;
 		if(URI_MATCHER.match(uri) != PEOPLES){
 			throw new IllegalArgumentException("Unkonwn URI : " + uri);
@@ -164,7 +165,7 @@ public class MyProvider extends ContentProvider {
 }
 class DBOpenHelpter extends SQLiteOpenHelper{
 	private static final String DB_CREATE = "create table "+
-			DBInfo.DB_TABLE_NAME+"(_id integer primary key autoincrement,name text not null,phone text,age integer);";
+			DBInfo.DB_TABLE_NAME+"(_id integer primary key autoincrement,name blob not null,phone text,age integer);";//
 	final static String tag = "zmm";
 
 	public DBOpenHelpter(Context context, String name,

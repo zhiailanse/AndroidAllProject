@@ -1560,7 +1560,7 @@ containing a value of this type.
         public static final int abs__textButton=0x7f060021;
         public static final int abs__title=0x7f060029;
         public static final int abs__up=0x7f060010;
-        public static final int action_settings=0x7f060078;
+        public static final int action_settings=0x7f06007d;
         public static final int bottom=0x7f060003;
         public static final int button1=0x7f060040;
         public static final int button2=0x7f06004c;
@@ -1587,13 +1587,15 @@ containing a value of this type.
         public static final int fullscreen=0x7f060018;
         public static final int gallery1=0x7f060067;
         public static final int gallery2=0x7f060042;
-        public static final int galleryWidgets1=0x7f060074;
+        public static final int galleryWidgets1=0x7f060079;
         public static final int gridMy2=0x7f06004e;
         public static final int homeAsUp=0x7f06000b;
         public static final int ids_myId_textview1=0x7f06001a;
         public static final int image=0x7f060058;
         public static final int imageViewListItem=0x7f06006e;
         public static final int indicator=0x7f060055;
+        public static final int layout01=0x7f060076;
+        public static final int layout02=0x7f060077;
         public static final int left=0x7f060015;
         public static final int listMode=0x7f060007;
         public static final int listMy1=0x7f06004d;
@@ -1601,7 +1603,7 @@ containing a value of this type.
         public static final int mainContainer=0x7f060059;
         public static final int main_forUI=0x7f060051;
         public static final int margin=0x7f060017;
-        public static final int menu_add=0x7f060079;
+        public static final int menu_add=0x7f06007e;
         public static final int menu_frame=0x7f06005c;
         public static final int myAttrsView=0x7f060057;
         public static final int none=0x7f060000;
@@ -1609,15 +1611,15 @@ containing a value of this type.
         public static final int pager=0x7f060056;
         public static final int petList=0x7f06006b;
         public static final int progressBar1=0x7f060041;
-        public static final int reset_timer=0x7f060077;
+        public static final int reset_timer=0x7f06007c;
         public static final int right=0x7f060016;
         public static final int selected_view=0x7f060019;
         public static final int showCustom=0x7f06000d;
         public static final int showHome=0x7f06000a;
         public static final int showTitle=0x7f06000c;
         public static final int slidingmenumain=0x7f06006f;
-        public static final int start_timer=0x7f060075;
-        public static final int stop_timer=0x7f060076;
+        public static final int start_timer=0x7f06007a;
+        public static final int stop_timer=0x7f06007b;
         public static final int tabMode=0x7f060008;
         public static final int textView1=0x7f06001d;
         public static final int textView2=0x7f06001c;
@@ -1626,10 +1628,13 @@ containing a value of this type.
         public static final int textViewListItem=0x7f06006d;
         public static final int textViewName=0x7f060049;
         public static final int textViewPhone=0x7f06004b;
+        public static final int textViewViewFlipper01=0x7f060074;
         public static final int top=0x7f060004;
         public static final int triangle=0x7f060001;
         public static final int underline=0x7f060002;
         public static final int useLogo=0x7f060009;
+        public static final int viewFlipper=0x7f060075;
+        public static final int webView1=0x7f060078;
         public static final int wrap_content=0x7f060005;
     }
     public static final class integer {
@@ -1691,7 +1696,11 @@ containing a value of this type.
         public static final int simple_list_single_item=0x7f03002e;
         public static final int slidingmenumain=0x7f03002f;
         public static final int softkeyboard_and_userevent=0x7f030030;
-        public static final int widgets_activity=0x7f030031;
+        public static final int view_flipper01=0x7f030031;
+        public static final int view_flipper02=0x7f030032;
+        public static final int view_flipper_layout=0x7f030033;
+        public static final int webview_layout=0x7f030034;
+        public static final int widgets_activity=0x7f030035;
     }
     public static final class menu {
         public static final int context_menu=0x7f0e0000;

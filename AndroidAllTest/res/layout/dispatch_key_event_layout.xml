@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <!-- 最上面一行 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="50dp"
+    	android:orientation="horizontal"
+        >
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+    </LinearLayout>
+    
+    <!-- 整个下半部分 -->
+    <LinearLayout 
+        android:layout_width="match_parent"
+    	android:layout_height="match_parent"
+    	android:orientation="horizontal"
+        >
+        <!-- 下半部分第一列 -->
+        <LinearLayout 
+            android:layout_width="100dp"
+    		android:layout_height="match_parent"
+            >
+            <ListView 
+                android:id="@+id/listMy1"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                >
+                
+            </ListView>
+        </LinearLayout>
+        <!-- 下半部分第二列 -->
+        <LinearLayout 
+            android:layout_width="100dp"
+    		android:layout_height="match_parent"
+            >
+            <GridView 
+                android:id="@+id/gridMy2"
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:numColumns="1"
+                >
+                
+            </GridView>
+        </LinearLayout>
+        
+        <!-- 下半部分第三列 -->
+        <LinearLayout 
+            android:layout_width="match_parent"
+    		android:layout_height="match_parent"
+    		android:orientation="vertical"
+            >
+            <LinearLayout 
+		        android:layout_width="match_parent"
+		    	android:layout_height="50dp"
+		    	android:orientation="horizontal"
+		        >
+		        <Button
+		            android:id="@+id/button1"
+		            android:layout_weight="1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Button" />
+		        <Button
+		            android:id="@+id/button2"
+		            android:layout_weight="1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Button" />
+		        <Button
+		            android:id="@+id/button2"
+		            android:layout_weight="1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Button" />
+		        <Button
+		            android:id="@+id/button2"
+		            android:layout_weight="1"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="Button" />
+		    </LinearLayout>
+		    
+            <!-- 最右下的井字 -->
+            <LinearLayout 
+		        android:layout_width="match_parent"
+		    	android:layout_height="match_parent"
+		    	android:orientation="horizontal"
+		    	android:layout_weight="1"
+		        >
+		        <Button
+		            android:id="@+id/button1"
+		            android:layout_weight="1"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:text="Button" />
+		        <Button
+		            android:id="@+id/button1"
+		            android:layout_weight="1"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:text="Button" />
+		    </LinearLayout>
+		    
+            <LinearLayout 
+                android:layout_weight="1"
+		        android:layout_width="match_parent"
+		    	android:layout_height="match_parent"
+		    	android:orientation="horizontal"
+		        >
+		        <Button
+		            android:id="@+id/button1"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:text="Button" />
+		        <Button
+		            android:id="@+id/button1"
+		            android:layout_width="match_parent"
+		            android:layout_height="match_parent"
+		            android:layout_weight="1"
+		            android:text="Button" />
+		    </LinearLayout>
+            
+            
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
